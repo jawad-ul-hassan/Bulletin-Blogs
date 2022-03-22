@@ -237,18 +237,18 @@ a {
   margin-top: 0.5rem;
 }
 
-.swiper {
+.hero .swiper {
   width: 100%;
   height: 100%;
 }
 
-.swiper-slide {
+.hero .swiper-slide {
   width: 100%;
   height: 100%;
   background-color: #111827;
 }
 
-.swiper-pagination-bullet {
+.hero .swiper-pagination-bullet {
   width: 14px;
   height: 14px;
   text-align: center;
@@ -256,7 +256,7 @@ a {
   background: #232e49;
 }
 
-.swiper-pagination-bullet-active {
+.hero .swiper-pagination-bullet-active {
   background: #1b9e30;
 }
 
