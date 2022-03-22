@@ -45,6 +45,7 @@ a {
 .header {
   background-color: #111827;
   padding: 1.5rem 0;
+  position: relative;
 }
 
 .top-navbar {
@@ -56,12 +57,13 @@ a {
 }
 
 .logo {
+  display: block;
   font-family: 'Bebas Neue', cursive;
   color: #3466f6;
   font-size: 3.6rem;
   line-height: 1;
   font-weight: normal;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.75px;
 }
 
 .logo-text-color {
@@ -127,11 +129,13 @@ a {
   align-items: center;
   column-gap: 2.5rem;
   padding-top: 1.5rem;
+  transition: 300ms ease-in;
 }
 
 .navlink {
   font-size: 1.5rem;
   font-weight: 500;
+  color: #ffff;
 }
 
 .navlink.active {
@@ -144,9 +148,16 @@ a {
 /* Hero-Section */
 
 .hero {
-  margin: 5rem 0;
+  margin-bottom: 5rem;
   padding-bottom: 5rem;
   position: relative;
+}
+
+.hero-container {
+  max-width: 130rem;
+  width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
 }
 
 .hero-item {
@@ -580,21 +591,13 @@ a {
 
 .newsletter-title {
   font-size: 2.8rem;
-  font-weight: 600;
+  font-weight: 700;
+  color: #3466f6;
+  text-transform: capitalize;
   margin-bottom: 1rem;
   position: relative;
   padding-bottom: 0.25rem;
   text-align: center;
-}
-
-.newsletter-title::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 20rem;
-  height: 3px;
-  background-color: #1b9e30;
-  width: 3.5rem;
 }
 
 .newsletter-desc {
@@ -648,11 +651,14 @@ a {
   padding: 2.5rem 0;
 }
 
-.footer .header-socials {
+.footer-socials {
+  display: flex;
   justify-content: center;
+  align-items: center;
+  column-gap: 2.5rem;
 }
 
-.footer .header-socials a > i {
+.footer-socials a > i {
   font-size: 2.4rem;
 }
 
@@ -666,4 +672,188 @@ a {
 
 .footer-text p {
   letter-spacing: 0.5px;
+}
+
+/* Mobile-Menu */
+
+#mobile-menu {
+  display: none;
+}
+
+/* Responsive Style ----- Media Queries ------ */
+
+@media (max-width: 1100px) {
+  .hero-item {
+    flex-direction: column;
+  }
+
+  .hero-container {
+    max-width: 85rem;
+    padding: 0;
+  }
+
+  .editor-trending-content {
+    column-gap: 2.5rem;
+  }
+
+  .editor-panel-content {
+    column-gap: 1rem;
+  }
+
+  .business-blogs-content,
+  .health-blogs-content,
+  .tech-blogs-content {
+    row-gap: 3.5rem;
+  }
+
+  .business-blogs-card,
+  .health-blogs-card,
+  .tech-blogs-card {
+    flex: 1 1 35%;
+  }
+}
+
+@media (max-width: 992px) {
+  .editor-trending-content {
+    flex-direction: column;
+    row-gap: 3.5rem;
+  }
+
+  .editor-panel,
+  .trending-panel {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .newsletter-text {
+    width: 75%;
+  }
+}
+
+@media (max-width: 767px) {
+  #mobile-menu {
+    display: block;
+    font-size: 2.4rem;
+    line-height: 0;
+    cursor: pointer;
+  }
+
+  .header {
+    padding: 1rem 0;
+  }
+
+  .header-socials,
+  .header-search-bar {
+    display: none;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #111827;
+    border-top: 1px solid #aaaaaa;
+    border-bottom: 2px solid #aaaaaa;
+    padding: 1.5rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    gap: 2.5rem;
+    z-index: 12;
+  }
+
+  .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .navlink {
+    color: #ffffff;
+  }
+
+  .design-img-top {
+    width: 8rem;
+    top: 0.5rem;
+    left: 0.5rem;
+  }
+
+  .design-img-bottom {
+    width: 8rem;
+    bottom: 0.5rem;
+    right: 0.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .editor-panel-content {
+    flex-direction: column;
+    row-gap: 2.5rem;
+  }
+
+  .business-blogs-card,
+  .health-blogs-card,
+  .tech-blogs-card {
+    flex: 1 1 100%;
+  }
+
+  .business-blogs-card > img,
+  .health-blogs-card > img,
+  .tech-blogs-card > img {
+    height: 32rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .article-title {
+    font-size: 2.2rem;
+  }
+
+  .editor-tag {
+    font-size: 1.6rem;
+  }
+
+  .article-desc,
+  .newsletter-desc {
+    font-size: 1.4rem;
+  }
+
+  .article-author-desc,
+  .article-publish-read {
+    font-size: 1.2rem;
+  }
+
+  .business-blogs-card-text,
+  .health-blogs-card-text,
+  .tech-blogs-card-text {
+    font-size: 1.6rem;
+  }
+
+  .newsletter-text {
+    width: 100%;
+  }
+
+  .design-img-top,
+  .design-img-bottom {
+    display: none;
+  }
+
+  .newsletter-title {
+    font-size: 2.2rem;
+  }
+
+  .newsletter-content {
+    padding: 2.5rem 0;
+  }
+
+  .footer-text {
+    column-gap: 0.5rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .footer-text {
+    flex-direction: column;
+    row-gap: 0.5rem;
+  }
 }
