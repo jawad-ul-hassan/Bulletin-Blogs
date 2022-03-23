@@ -1053,7 +1053,11 @@ a {
   }
 
   .business-tab-card-info {
-    justify-content: center;
+    justify-content: space-between;
+  }
+
+  .business-tab-card {
+    padding: 1.5rem 0.5rem;
   }
 }
 
