@@ -19,3 +19,33 @@ var heroSlider = new Swiper('.heroSlider', {
     clickable: true,
   },
 });
+
+// DOM Elements
+const tabs = document.querySelectorAll('.tab');
+const tabContents = document.querySelectorAll('.tabcontent');
+const darkModeSwitch = document.querySelector('#dark-mode-switch');
+
+// Functions
+const activateTab = tabnum => {
+  tabs.forEach(tab => {
+    tab.classList.remove('active');
+  });
+
+  tabContents.forEach(tabContent => {
+    tabContent.classList.remove('active');
+  });
+
+  document.querySelector('#tab' + tabnum).classList.add('active');
+  document.querySelector('#tabcontent' + tabnum).classList.add('active');
+};
+
+// Event Listeners
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    activateTab(tab.dataset.tab);
+  });
+});
+
+// Retrieve stored data
+
+activateTab(opentab);
