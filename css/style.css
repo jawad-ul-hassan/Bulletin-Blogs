@@ -990,6 +990,89 @@ a {
   height: 100%;
 }
 
+/* ------------------------Authors Page------------------------ */
+.authors-section {
+  margin: 10rem 0;
+}
+
+.authors-title {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+  position: relative;
+  padding-bottom: 0.25rem;
+}
+
+.authors-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background-color: #1b9e30;
+  width: 3.5rem;
+}
+
+.authors-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 3.5rem;
+  flex-wrap: wrap;
+}
+
+.authors {
+  flex: 1 1 23%;
+  background-color: #111827;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+}
+
+.authors > img {
+  display: block;
+  width: 12rem;
+  height: 12rem;
+  margin: 0 auto;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+  border: 2px solid #1b9e30;
+}
+
+.authors-name {
+  font-size: 2.4rem;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.authors-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1.5rem;
+}
+
+.authors-socials a > i {
+  font-size: 1.4rem;
+}
+
+.authors-articles {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: right;
+  color: #1b9e30;
+  margin-top: 1.5rem;
+}
+
+.authors-desc {
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.authors-articles > i {
+  padding-left: 0.35rem;
+}
+
 /* Responsive Style ----- Media Queries ------ */
 
 @media (max-width: 1100px) {
@@ -1038,6 +1121,10 @@ a {
 @media (max-width: 900px) {
   .newsletter-text {
     width: 75%;
+  }
+
+  .authors {
+    flex: 1 1 33.3333%;
   }
 }
 
@@ -1168,6 +1255,14 @@ a {
     width: 100%;
     height: 25rem;
     margin-left: 0;
+  }
+
+  .authors-section {
+    margin: 5rem 0;
+  }
+
+  .authors {
+    flex: 1 1 50%;
   }
 }
 
