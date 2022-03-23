@@ -1047,6 +1047,14 @@ a {
   .business-hero-content {
     height: 35rem;
   }
+
+  .business-tab-card-body-desc {
+    text-align: center;
+  }
+
+  .business-tab-card-info {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 420px) {
