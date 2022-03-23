@@ -44,7 +44,7 @@ tabs.forEach(tab => {
   });
 });
 
-// Business-Tabs Functionality
+// Health-Tabs Functionality
 const tabsHealth = document.querySelectorAll('.tabHealth');
 const tabContentsHealth = document.querySelectorAll('.tabcontent-health');
 
@@ -64,5 +64,28 @@ const activateHealthTab = tabnum => {
 tabsHealth.forEach(tab => {
   tab.addEventListener('click', () => {
     activateHealthTab(tab.dataset.tab);
+  });
+});
+
+// Tech-Tabs Functionality
+const tabsTech = document.querySelectorAll('.tabTech');
+const tabContentsTech = document.querySelectorAll('.tabcontent-tech');
+
+const activateTechTab = tabnum => {
+  tabsTech.forEach(tab => {
+    tab.classList.remove('active');
+  });
+
+  tabContentsTech.forEach(tabContent => {
+    tabContent.classList.remove('active');
+  });
+
+  document.querySelector('#tab' + tabnum).classList.add('active');
+  document.querySelector('#tabcontent' + tabnum).classList.add('active');
+};
+
+tabsTech.forEach(tab => {
+  tab.addEventListener('click', () => {
+    activateTechTab(tab.dataset.tab);
   });
 });
