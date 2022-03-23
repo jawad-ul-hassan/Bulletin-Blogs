@@ -691,14 +691,16 @@ a {
   display: none;
 }
 
-/* ------------------------Business-Page------------------------ */
-.business-hero-content {
+/* ------------------------Business-Page - Health-Page Technology-Page------------------------ */
+.business-hero-content,
+.health-hero-content {
   position: relative;
   width: 100%;
   height: 50rem;
 }
 
-.business-hero {
+.business-hero,
+.health-hero {
   position: relative;
   display: flex;
   align-items: center;
@@ -706,7 +708,8 @@ a {
   overflow: hidden;
 }
 
-.business-hero img {
+.business-hero img,
+.health-hero img {
   position: absolute;
   top: 0;
   left: 0;
@@ -718,7 +721,8 @@ a {
   transform: translateZ(1px);
 }
 
-.business-hero-title {
+.business-hero-title,
+.health-hero-title {
   font-size: 4.2rem;
   font-weight: 700;
   line-height: 1.35;
@@ -733,13 +737,15 @@ a {
   margin-top: 10rem;
 }
 
-.tabs {
+.tabs,
+.tabsHealth {
   display: flex;
   align-items: center;
   column-gap: 2.5rem;
 }
 
-.tabs a {
+.tabs a,
+.tabsHealth a {
   cursor: pointer;
   font-size: 1.6rem;
   font-weight: 500;
@@ -748,32 +754,37 @@ a {
   padding-bottom: 0.5rem;
 }
 
-.tabs a.active {
+.tabs a.active,
+.tabsHealth a.active {
   color: #1b9e30;
   border-bottom: 2px solid #1b9e30;
   font-weight: 700;
   cursor: default;
 }
 
-.tabcontent {
+.tabcontent,
+.tabcontent-health {
   display: none;
   margin-top: 3.5rem;
 }
 
-.business-tab-card {
+.business-tab-card,
+.health-tab-card {
   display: block;
   background-color: #111827;
   padding: 2.5rem;
   margin-bottom: 2.5rem;
 }
 
-.business-tab-card-header {
+.business-tab-card-header,
+.health-tab-card-header {
   display: flex;
   align-items: center;
   column-gap: 1.5rem;
 }
 
-.business-tab-card-header > img {
+.business-tab-card-header > img,
+.health-tab-card-header > img {
   display: block;
   width: 4rem;
   height: 4rem;
@@ -781,12 +792,14 @@ a {
   border-radius: 50%;
 }
 
-.business-tab-card-author {
+.business-tab-card-author,
+.health-tab-card-author {
   font-size: 1.4rem;
   font-weight: 500;
 }
 
-.business-tab-card-time {
+.business-tab-card-time,
+.health-tab-card-time {
   font-size: 1.4rem;
   font-weight: 500;
   width: fit-content;
@@ -796,14 +809,16 @@ a {
   border-radius: 0.25rem;
 }
 
-.business-tab-card-body {
+.business-tab-card-body,
+.health-tab-card-body {
   display: flex;
   justify-content: space-between;
   align-items: center;
   column-gap: 3.5rem;
 }
 
-.business-tab-card-body-img > img {
+.business-tab-card-body-img > img,
+.health-tab-card-body-img > img {
   display: block;
   width: 18rem;
   height: 18rem;
@@ -812,21 +827,24 @@ a {
   border-radius: 0.5rem;
 }
 
-.business-tab-card-title {
+.business-tab-card-title,
+.health-tab-card-title {
   font-size: 2.8rem;
   font-weight: 600;
   line-height: 1.35;
   margin: 1rem 0;
 }
 
-.business-tab-card-info {
+.business-tab-card-info,
+.health-tab-card-info {
   margin-top: 3.5rem;
   display: flex;
   column-gap: 3.5rem;
   align-items: center;
 }
 
-.business-tab-card-tag {
+.business-tab-card-tag,
+.health-tab-card-tag {
   width: fit-content;
   background-color: #daa520;
   color: #ffff;
@@ -836,13 +854,19 @@ a {
   padding: 0.35rem 1.5rem;
 }
 
-.business-tab-card-read {
+.health-tab-card-tag {
+  background-color: #00c897;
+}
+
+.business-tab-card-read,
+.health-tab-card-read {
   font-size: 1.4rem;
   font-weight: 500;
   color: #aaaaaa;
 }
 
-.business-tab-card-bookmark {
+.business-tab-card-bookmark,
+.health-tab-card-bookmark {
   font-size: 1.8rem;
   cursor: pointer;
 }
@@ -974,34 +998,41 @@ a {
     height: 32rem;
   }
 
-  .business-hero-title {
+  .business-hero-title,
+  .health-hero-title {
     font-size: 3.4rem;
     margin: 0 1.5rem;
   }
 
-  .business-hero-content {
+  .business-hero-content,
+  .health-hero-content {
     height: 40rem;
   }
 
-  .business-tab-card {
+  .business-tab-card,
+  .health-tab-card {
     padding: 1.5rem;
   }
 
-  .business-tab-card-body {
+  .business-tab-card-body,
+  .health-tab-card-body {
     flex-direction: column;
     row-gap: 1.5rem;
   }
 
-  .business-tab-card-body-desc {
+  .business-tab-card-body-desc,
+  .health-tab-card-body-desc {
     order: 2;
   }
 
-  .business-tab-card-body-img {
+  .business-tab-card-body-img,
+  .health-tab-card-body-img {
     width: 100%;
     margin-top: 1.5rem;
   }
 
-  .business-tab-card-body-img > img {
+  .business-tab-card-body-img > img,
+  .health-tab-card-body-img > img {
     width: 100%;
     height: 25rem;
     margin-left: 0;
@@ -1038,7 +1069,8 @@ a {
   }
 
   .newsletter-title,
-  .business-tab-card-title {
+  .business-tab-card-title,
+  .health-tab-card-title {
     font-size: 2.2rem;
   }
 
@@ -1050,24 +1082,29 @@ a {
     column-gap: 0.5rem;
   }
 
-  .business-hero-title {
+  .business-hero-title,
+  .health-hero-title {
     font-size: 3rem;
     text-align: center;
   }
 
-  .business-hero-content {
+  .business-hero-content,
+  .health-hero-content {
     height: 35rem;
   }
 
-  .business-tab-card-body-desc {
+  .business-tab-card-body-desc,
+  .health-tab-card-body-desc {
     text-align: center;
   }
 
-  .business-tab-card-info {
+  .business-tab-card-info,
+  .health-tab-card-info {
     justify-content: space-between;
   }
 
-  .business-tab-card {
+  .business-tab-card,
+  .health-tab-card {
     padding: 1.5rem 0.5rem;
   }
 }

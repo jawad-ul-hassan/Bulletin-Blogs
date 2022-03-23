@@ -44,4 +44,25 @@ tabs.forEach(tab => {
   });
 });
 
-activateTab(opentab);
+// Business-Tabs Functionality
+const tabsHealth = document.querySelectorAll('.tabHealth');
+const tabContentsHealth = document.querySelectorAll('.tabcontent-health');
+
+const activateHealthTab = tabnum => {
+  tabsHealth.forEach(tab => {
+    tab.classList.remove('active');
+  });
+
+  tabContentsHealth.forEach(tabContent => {
+    tabContent.classList.remove('active');
+  });
+
+  document.querySelector('#tab' + tabnum).classList.add('active');
+  document.querySelector('#tabcontent' + tabnum).classList.add('active');
+};
+
+tabsHealth.forEach(tab => {
+  tab.addEventListener('click', () => {
+    activateHealthTab(tab.dataset.tab);
+  });
+});
