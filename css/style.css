@@ -709,7 +709,7 @@ a {
 }
 
 .business-hero-title {
-  font-size: 3.2rem;
+  font-size: 4.2rem;
   font-weight: 700;
   line-height: 1.35;
   color: #ffffff;
@@ -962,6 +962,39 @@ a {
   .tech-blogs-card > img {
     height: 32rem;
   }
+
+  .business-hero-title {
+    font-size: 3.4rem;
+    margin: 0 1.5rem;
+  }
+
+  .business-hero-content {
+    height: 40rem;
+  }
+
+  .business-tab-card {
+    padding: 1.5rem;
+  }
+
+  .business-tab-card-body {
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
+
+  .business-tab-card-body-desc {
+    order: 2;
+  }
+
+  .business-tab-card-body-img {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .business-tab-card-body-img > img {
+    width: 100%;
+    height: 25rem;
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 500px) {
@@ -971,11 +1004,6 @@ a {
 
   .editor-tag {
     font-size: 1.6rem;
-  }
-
-  .article-desc,
-  .newsletter-desc {
-    font-size: 1.4rem;
   }
 
   .article-author-desc,
@@ -998,7 +1026,8 @@ a {
     display: none;
   }
 
-  .newsletter-title {
+  .newsletter-title,
+  .business-tab-card-title {
     font-size: 2.2rem;
   }
 
@@ -1008,6 +1037,15 @@ a {
 
   .footer-text {
     column-gap: 0.5rem;
+  }
+
+  .business-hero-title {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .business-hero-content {
+    height: 35rem;
   }
 }
 
