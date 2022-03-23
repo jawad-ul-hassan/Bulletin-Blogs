@@ -1049,6 +1049,7 @@ a {
   justify-content: center;
   align-items: center;
   column-gap: 1.5rem;
+  padding: 0.5rem 0;
 }
 
 .authors-socials a > i {
@@ -1071,6 +1072,129 @@ a {
 
 .authors-articles > i {
   padding-left: 0.35rem;
+}
+
+/* ------------------------Post Page------------------------ */
+.post {
+  margin: 5rem 0;
+}
+
+.post-container {
+  max-width: 92rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem 2.5rem;
+  background-color: #111827;
+}
+
+.post-tag {
+  width: fit-content;
+  background-color: #00c897;
+  color: #ffff;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 0.35rem 1.5rem;
+  margin: 0 auto;
+}
+
+.post-title {
+  font-size: 2.8rem;
+  font-weight: 500;
+  line-height: 1.35;
+  text-align: center;
+  margin: 0.95rem 0;
+}
+
+.post-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1.5rem;
+}
+
+.post-author,
+.post-time,
+.post-duration {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #3466f6;
+}
+
+.post-time,
+.post-duration {
+  color: #aeaeae;
+}
+
+.post-duration > i {
+  color: #daa520;
+  font-size: 1.3rem;
+  padding-left: 0.5rem;
+}
+
+.post-hero {
+  margin: 2.5rem 0;
+}
+
+.post-hero > img {
+  display: block;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.post-data {
+  /* padding: 0 2.5rem; */
+}
+
+.post-data p {
+  margin-bottom: 2.5rem;
+  font-size: 1.8rem;
+}
+
+.special-text-box {
+  margin: 2.5rem 0;
+  font-size: 2.2rem;
+  color: #aeaeae;
+  padding: 0 2.5rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.post-ref-link {
+  text-decoration: underline;
+  color: #00c897;
+}
+
+.post-end {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.post-reactions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2.5rem;
+  column-gap: 1.5rem;
+}
+
+.post-reactions-item {
+  display: flex;
+  align-items: center;
+  column-gap: 2.5rem;
+}
+
+.post-reactions-item a {
+  font-size: 2.2rem;
+}
+
+.react-no {
+  color: #aeaeae;
+  font-size: 1.8rem;
+  padding-left: 0.5rem;
 }
 
 /* Responsive Style ----- Media Queries ------ */
@@ -1257,7 +1381,8 @@ a {
     margin-left: 0;
   }
 
-  .authors-section {
+  .authors-section,
+  .contact {
     margin: 5rem 0;
   }
 
@@ -1341,6 +1466,10 @@ a {
   }
 
   .contact-content {
+    padding: 1rem;
+  }
+
+  .post-container {
     padding: 1.5rem;
   }
 }
