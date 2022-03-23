@@ -14,18 +14,17 @@ var heroSlider = new Swiper('.heroSlider', {
     disableOnInteraction: false,
   },
   speed: 1500,
+  loop: true,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
   },
 });
 
-// DOM Elements
+// Business-Tabs Functionality
 const tabs = document.querySelectorAll('.tab');
 const tabContents = document.querySelectorAll('.tabcontent');
-const darkModeSwitch = document.querySelector('#dark-mode-switch');
 
-// Functions
 const activateTab = tabnum => {
   tabs.forEach(tab => {
     tab.classList.remove('active');
@@ -39,13 +38,10 @@ const activateTab = tabnum => {
   document.querySelector('#tabcontent' + tabnum).classList.add('active');
 };
 
-// Event Listeners
 tabs.forEach(tab => {
   tab.addEventListener('click', () => {
     activateTab(tab.dataset.tab);
   });
 });
-
-// Retrieve stored data
 
 activateTab(opentab);

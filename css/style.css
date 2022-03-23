@@ -260,6 +260,11 @@ a {
   background: #1b9e30;
 }
 
+.article-read-time > i {
+  font-size: 1.2rem;
+  color: #daa520;
+}
+
 /* Editor-Trending */
 
 .editor-trending {
@@ -388,6 +393,11 @@ a {
   background-color: #111827;
   padding: 1rem;
   margin-bottom: 1.5rem;
+  transition: all 300ms ease-in;
+}
+
+.trending-panel-card:hover {
+  transform: translateY(5px);
 }
 
 .trending-no {
@@ -751,6 +761,7 @@ a {
 }
 
 .business-tab-card {
+  display: block;
   background-color: #111827;
   padding: 2.5rem;
   margin-bottom: 2.5rem;
@@ -817,7 +828,7 @@ a {
 
 .business-tab-card-tag {
   width: fit-content;
-  background-color: #00c897;
+  background-color: #daa520;
   color: #ffff;
   border-radius: 3rem;
   font-size: 1.4rem;
