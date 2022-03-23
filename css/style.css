@@ -899,6 +899,97 @@ a {
   display: block;
 }
 
+/* ------------------------Contact-Us Page------------------------ */
+
+.contact {
+  margin: 10rem 0;
+}
+
+.contact-content {
+  background-color: #111827;
+  padding: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 4.5rem;
+  flex-wrap: wrap;
+}
+
+.contact-img,
+.contact-item {
+  flex: 1 1 33.333%;
+}
+
+.contact-img > img {
+  display: block;
+  width: 100%;
+}
+
+.contact-title,
+.map-title {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+  position: relative;
+  padding-bottom: 0.25rem;
+}
+
+.contact-title::after,
+.map-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background-color: #1b9e30;
+  width: 3.5rem;
+}
+
+.contact-form-control {
+  margin-bottom: 1.5rem;
+}
+
+.contact-form-control > label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+}
+
+.contact-form-control > input,
+.contact-form-control > textarea {
+  display: block;
+  width: 100%;
+  font-family: inherit;
+  background-color: #121212;
+  border: 1px solid #777777;
+  padding: 0.7rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.map {
+  margin: 10rem 0;
+}
+
+.map-content {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.map-content > iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /* Responsive Style ----- Media Queries ------ */
 
 @media (max-width: 1100px) {
@@ -1001,6 +1092,16 @@ a {
     width: 8rem;
     bottom: 0.5rem;
     right: 0.5rem;
+  }
+
+  .contact-content {
+    flex-direction: column;
+    row-gap: 3.5rem;
+  }
+
+  .contact-img,
+  .contact-item {
+    width: 100%;
   }
 }
 
@@ -1142,6 +1243,10 @@ a {
   .health-tab-card,
   .tech-tab-card {
     padding: 1.5rem 0.5rem;
+  }
+
+  .contact-content {
+    padding: 1.5rem;
   }
 }
 
